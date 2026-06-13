@@ -15,3 +15,4 @@ torchvision>=0.16
 # notebook
 jupyterlab>=4.0
 matplotlib>=3.7
+japanize-matplotlib>=1.1    # 図中の日本語表示

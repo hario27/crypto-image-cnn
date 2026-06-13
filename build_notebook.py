@@ -27,11 +27,13 @@ md(r"""
 code(r"""
 %load_ext autoreload
 %autoreload 2
+%matplotlib inline
 import sys, os
 sys.path.insert(0, os.path.abspath(".."))   # リポジトリのルートをパスに追加
 
 import numpy as np
 import matplotlib.pyplot as plt
+import japanize_matplotlib   # 図中の日本語表示
 import torch
 
 from src.config import Config

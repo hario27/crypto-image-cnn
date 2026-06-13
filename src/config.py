@@ -18,8 +18,8 @@ MODEL_DIR = ROOT / "models"
 class Config:
     # --- 市場 / 期間 ---
     symbol: str = "BTCUSDT"
-    start: str = "2024-05-01"          # 開始日(UTC、この日を含む)
-    end: str = "2024-08-01"            # 終了日(UTC、この日を含まない)
+    start: str = "2026-01-01"          # 開始日(UTC、この日を含む)
+    end: str = "2026-04-01"            # 終了日(UTC、この日を含まない)
     bar_sec: int = 10                  # バーの秒数(生の約定から構築)
 
     # --- ターゲット ---
@@ -43,7 +43,7 @@ class Config:
     weight_decay: float = 1e-4
     dropout: float = 0.3
     seed: int = 42
-    num_workers: int = 2
+    num_workers: int = 0               # 0 が最も移植性が高い(Docker等の共有メモリ問題を避ける)
 
     def __post_init__(self) -> None:
         DATA_DIR.mkdir(parents=True, exist_ok=True)

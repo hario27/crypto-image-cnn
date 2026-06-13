@@ -17,3 +17,6 @@ venv/
 .DS_Store
 .vscode/
 .idea/
+
+# 実行ログ
+*.log
